@@ -476,16 +476,16 @@ function Footer() {
     className: "list-unstyled"
   }, __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/presentation?ref=nnjs-footer"
+    href: "#"
   }, "About Us")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://blog.creative-tim.com?ref=nnjs-footer"
+    href: "#"
   }, "Blog")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.github.com/creativetimofficial?ref=nnjs-footer"
+    href: "#"
   }, "Github")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/bootstrap-themes/free?ref=nnjs-footer"
+    href: "#"
   }, "Free Products")))), __jsx("div", {
     className: "w-full lg:w-4/12 px-4"
   }, __jsx("span", {
@@ -494,16 +494,16 @@ function Footer() {
     className: "list-unstyled"
   }, __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://github.com/creativetimofficial/notus-nextjs/blob/master/LICENSE.md?ref=nnjs-footer"
+    href: "#"
   }, "MIT License")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/terms?ref=nnjs-footer"
+    href: "#"
   }, "Terms & Conditions")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/privacy?ref=nnjs-footer"
+    href: "#"
   }, "Privacy Policy")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/contact-us?ref=nnjs-footer"
+    href: "#"
   }, "Contact Us"))))))), __jsx("hr", {
     className: "my-6 border-gray-400"
   }), __jsx("div", {
@@ -512,10 +512,10 @@ function Footer() {
     className: "w-full md:w-4/12 px-4 mx-auto text-center"
   }, __jsx("div", {
     className: "text-sm text-gray-600 font-semibold py-1"
-  }, "Copyright \xA9 ", new Date().getFullYear(), " Notus NextJS by", " ", __jsx("a", {
-    href: "https://www.creative-tim.com?ref=nnjs-footer",
+  }, "Copyright \xA9 ", new Date().getFullYear(), " CNDV", " ", __jsx("a", {
+    href: "#",
     className: "text-gray-600 hover:text-gray-900"
-  }, "Creative Tim"), "."))))));
+  }, "Carteira Nacional Digital de Vacina\xE7\xE3o"), "."))))));
 }
 
 /***/ }),

@@ -2228,7 +2228,7 @@ function Sidebar() {
   }, Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/colors/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2236,7 +2236,7 @@ function Sidebar() {
   }), "Styles")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2244,7 +2244,7 @@ function Sidebar() {
   }), "CSS Components")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2252,7 +2252,7 @@ function Sidebar() {
   }), "Angular")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2260,7 +2260,7 @@ function Sidebar() {
   }), "Javascript")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2268,7 +2268,7 @@ function Sidebar() {
   }), "NextJS")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2276,7 +2276,7 @@ function Sidebar() {
   }), "React")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2284,7 +2284,7 @@ function Sidebar() {
   }), "Svelte")), Sidebar_jsx("li", {
     className: "inline-flex"
   }, Sidebar_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus",
+    href: "#",
     target: "_blank",
     className: "text-gray-800 hover:text-gray-600 text-sm block mb-4 no-underline font-semibold"
   }, Sidebar_jsx("i", {
@@ -2417,23 +2417,23 @@ function FooterAdmin() {
   }, FooterAdmin_jsx("div", {
     className: "text-sm text-gray-600 font-semibold py-1 text-center md:text-left"
   }, "Copyright \xA9 ", new Date().getFullYear(), " ", FooterAdmin_jsx("a", {
-    href: "https://www.creative-tim.com?ref=nnjs-footer-admin",
+    href: "#",
     className: "text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
   }, "Creative Tim"))), FooterAdmin_jsx("div", {
     className: "w-full md:w-8/12 px-4"
   }, FooterAdmin_jsx("ul", {
     className: "flex flex-wrap list-none md:justify-end  justify-center"
   }, FooterAdmin_jsx("li", null, FooterAdmin_jsx("a", {
-    href: "https://www.creative-tim.com?ref=nnjs-footer-admin",
+    href: "#",
     className: "text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
   }, "Creative Tim")), FooterAdmin_jsx("li", null, FooterAdmin_jsx("a", {
-    href: "https://www.creative-tim.com/presentation?ref=nnjs-footer-admin",
+    href: "#",
     className: "text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
   }, "About Us")), FooterAdmin_jsx("li", null, FooterAdmin_jsx("a", {
-    href: "http://blog.creative-tim.com?ref=nnjs-footer-admin",
+    href: "#",
     className: "text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
   }, "Blog")), FooterAdmin_jsx("li", null, FooterAdmin_jsx("a", {
-    href: "https://github.com/creativetimofficial/notus-nextjs/blob/master/LICENSE.md?ref=nnjs-footer-admin",
+    href: "#",
     className: "text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1 px-3"
   }, "MIT License"))))))));
 }

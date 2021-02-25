@@ -483,16 +483,16 @@ function Footer() {
     className: "list-unstyled"
   }, __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/presentation?ref=nnjs-footer"
+    href: "#"
   }, "About Us")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://blog.creative-tim.com?ref=nnjs-footer"
+    href: "#"
   }, "Blog")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.github.com/creativetimofficial?ref=nnjs-footer"
+    href: "#"
   }, "Github")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://www.creative-tim.com/bootstrap-themes/free?ref=nnjs-footer"
+    href: "#"
   }, "Free Products")))), __jsx("div", {
     className: "w-full lg:w-4/12 px-4"
   }, __jsx("span", {
@@ -501,16 +501,16 @@ function Footer() {
     className: "list-unstyled"
   }, __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://github.com/creativetimofficial/notus-nextjs/blob/master/LICENSE.md?ref=nnjs-footer"
+    href: "#"
   }, "MIT License")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/terms?ref=nnjs-footer"
+    href: "#"
   }, "Terms & Conditions")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/privacy?ref=nnjs-footer"
+    href: "#"
   }, "Privacy Policy")), __jsx("li", null, __jsx("a", {
     className: "text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm",
-    href: "https://creative-tim.com/contact-us?ref=nnjs-footer"
+    href: "#"
   }, "Contact Us"))))))), __jsx("hr", {
     className: "my-6 border-gray-400"
   }), __jsx("div", {
@@ -519,10 +519,10 @@ function Footer() {
     className: "w-full md:w-4/12 px-4 mx-auto text-center"
   }, __jsx("div", {
     className: "text-sm text-gray-600 font-semibold py-1"
-  }, "Copyright \xA9 ", new Date().getFullYear(), " Notus NextJS by", " ", __jsx("a", {
-    href: "https://www.creative-tim.com?ref=nnjs-footer",
+  }, "Copyright \xA9 ", new Date().getFullYear(), " CNDV", " ", __jsx("a", {
+    href: "#",
     className: "text-gray-600 hover:text-gray-900"
-  }, "Creative Tim"), "."))))));
+  }, "Carteira Nacional Digital de Vacina\xE7\xE3o"), "."))))));
 }
 
 /***/ }),
@@ -623,7 +623,7 @@ const IndexDropdown = () => {
       e.preventDefault();
       dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
     }
-  }, "Demo Pages"), __jsx("div", {
+  }, "Dropdown Example"), __jsx("div", {
     ref: popoverDropdownRef,
     className: (dropdownPopoverShow ? "block " : "hidden ") + "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
   }, __jsx("span", {
@@ -714,7 +714,7 @@ function Navbar(props) {
     className: "flex items-center"
   }, IndexNavbar_jsx("a", {
     className: "hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index-navbar"
+    href: "#"
   }, IndexNavbar_jsx("i", {
     className: "text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
   }), " ", "Docs"))), IndexNavbar_jsx("ul", {
@@ -725,7 +725,7 @@ function Navbar(props) {
     className: "flex items-center"
   }, IndexNavbar_jsx("a", {
     className: "hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
-    href: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F",
+    href: "#",
     target: "_blank"
   }, IndexNavbar_jsx("i", {
     className: "text-gray-500 fab fa-facebook text-lg leading-lg "
@@ -735,7 +735,7 @@ function Navbar(props) {
     className: "flex items-center"
   }, IndexNavbar_jsx("a", {
     className: "hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
-    href: "https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20NextJS%20UI%20Kit%20and%20Admin.%20Let%20Notus%20NextJS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level.",
+    href: "#",
     target: "_blank"
   }, IndexNavbar_jsx("i", {
     className: "text-gray-500 fab fa-twitter text-lg leading-lg "
@@ -745,7 +745,7 @@ function Navbar(props) {
     className: "flex items-center"
   }, IndexNavbar_jsx("a", {
     className: "hover:text-gray-600 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold",
-    href: "https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index-navbar",
+    href: "#",
     target: "_blank"
   }, IndexNavbar_jsx("i", {
     className: "text-gray-500 fab fa-github text-lg leading-lg "
@@ -782,20 +782,20 @@ function Index() {
     className: "pt-32 sm:pt-0"
   }, pages_jsx("h2", {
     className: "font-semibold text-4xl text-gray-700"
-  }, "Notus NextJS - A beautiful extension for Tailwind CSS."), pages_jsx("p", {
+  }, "CNDV"), pages_jsx("p", {
     className: "mt-4 text-lg leading-relaxed text-gray-600"
   }, "Notus NextJS is Free and Open Source. It does not change or add any CSS to the already one from", " ", pages_jsx("a", {
-    href: "https://tailwindcss.com/?ref=creativetim",
+    href: "https://tailwindcss.com",
     className: "text-gray-700",
     target: "_blank"
   }, "Tailwind CSS"), ". It features multiple HTML elements and it comes with dynamic components for ReactJS, Vue and Angular."), pages_jsx("div", {
     className: "mt-12"
   }, pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index",
+    href: "#",
     target: "_blank",
     className: "get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-600 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-  }, "Get started"), pages_jsx("a", {
-    href: "https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index",
+  }, "Android"), pages_jsx("a", {
+    href: "#",
     className: "github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg",
     target: "_blank"
   }, "Github Star"))))), pages_jsx("img", {
@@ -935,7 +935,7 @@ function Index() {
   }, "Progressbars"), pages_jsx("span", {
     className: "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2"
   }, "Typography")), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index",
+    href: "#",
     target: "_blank",
     className: "font-bold text-gray-800 hover:text-gray-600 ease-linear transition-all duration-150"
   }, "View All", " ", pages_jsx("i", {
@@ -977,7 +977,7 @@ function Index() {
   }, pages_jsx("div", {
     className: "my-4 w-full lg:w-6/12 px-4"
   }, pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-red-600 shadow-lg rounded-lg text-center p-8"
@@ -988,7 +988,7 @@ function Index() {
   }), pages_jsx("p", {
     className: "text-lg text-white mt-4 font-semibold"
   }, "Svelte"))), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8"
@@ -999,7 +999,7 @@ function Index() {
   }), pages_jsx("p", {
     className: "text-lg text-white mt-4 font-semibold"
   }, "ReactJS"))), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-gray-800 shadow-lg rounded-lg text-center p-8 mt-8"
@@ -1012,18 +1012,18 @@ function Index() {
   }, "NextJS")))), pages_jsx("div", {
     className: "my-4 w-full lg:w-6/12 px-4 lg:mt-16"
   }, pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-yellow-500 shadow-lg rounded-lg text-center p-8"
   }, pages_jsx("img", {
     alt: "...",
     className: "shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white",
-    src: "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+    src: "#"
   }), pages_jsx("p", {
     className: "text-lg text-white mt-4 font-semibold"
   }, "JavaScript"))), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8"
@@ -1034,7 +1034,7 @@ function Index() {
   }), pages_jsx("p", {
     className: "text-lg text-white mt-4 font-semibold"
   }, "Angular"))), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index",
+    href: "#",
     target: "_blank"
   }, pages_jsx("div", {
     className: "bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8"
@@ -1075,7 +1075,7 @@ function Index() {
   }, "Tabs"), pages_jsx("span", {
     className: "text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-gray-600 bg-white uppercase last:mr-0 mr-2 mt-2"
   }, "Tooltips")), pages_jsx("a", {
-    href: "https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index",
+    href: "#",
     target: "_blank",
     className: "font-bold text-gray-800 hover:text-gray-600 ease-linear transition-all duration-150"
   }, "View all", " ", pages_jsx("i", {

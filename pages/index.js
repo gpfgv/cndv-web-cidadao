@@ -13,13 +13,13 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-gray-700">
-                Notus NextJS - A beautiful extension for Tailwind CSS.
+                CNDV
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
                 Notus NextJS is Free and Open Source. It does not change or add
                 any CSS to the already one from{" "}
                 <a
-                  href="https://tailwindcss.com/?ref=creativetim"
+                  href="https://tailwindcss.com"
                   className="text-gray-700"
                   target="_blank"
                 >
@@ -30,14 +30,14 @@ export default function Index() {
               </p>
               <div className="mt-12">
                 <a
-                  href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus?ref=nnjs-index"
+                  href="#"
                   target="_blank"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-600 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  Get started
+                  Android
                 </a>
                 <a
-                  href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
+                  href="#"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
                   target="_blank"
                 >
@@ -214,7 +214,7 @@ export default function Index() {
                 </span>
               </div>
               <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
+                href="#"
                 target="_blank"
                 className="font-bold text-gray-800 hover:text-gray-600 ease-linear transition-all duration-150"
               >
@@ -264,7 +264,7 @@ export default function Index() {
               <div className="justify-center flex flex-wrap relative">
                 <div className="my-4 w-full lg:w-6/12 px-4">
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-red-600 shadow-lg rounded-lg text-center p-8">
@@ -279,7 +279,7 @@ export default function Index() {
                     </div>
                   </a>
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-blue-500 shadow-lg rounded-lg text-center p-8 mt-8">
@@ -294,7 +294,7 @@ export default function Index() {
                     </div>
                   </a>
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-gray-800 shadow-lg rounded-lg text-center p-8 mt-8">
@@ -311,14 +311,14 @@ export default function Index() {
                 </div>
                 <div className="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
                       <img
                         alt="..."
                         className="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white"
-                        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"
+                        src="#"
                       />
                       <p className="text-lg text-white mt-4 font-semibold">
                         JavaScript
@@ -326,7 +326,7 @@ export default function Index() {
                     </div>
                   </a>
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
@@ -341,7 +341,7 @@ export default function Index() {
                     </div>
                   </a>
                   <a
-                    href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index"
+                    href="#"
                     target="_blank"
                   >
                     <div className="bg-green-500 shadow-lg rounded-lg text-center p-8 mt-8">
@@ -402,7 +402,7 @@ export default function Index() {
                 </span>
               </div>
               <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
+                href="#"
                 target="_blank"
                 className="font-bold text-gray-800 hover:text-gray-600 ease-linear transition-all duration-150"
               >

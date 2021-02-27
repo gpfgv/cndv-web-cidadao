@@ -2,20 +2,20 @@ import React from "react";
 
 // components
 
-import Navbar from "components/Navbars/AuthNavbar.js";
 import FooterSmall from "components/Footers/FooterSmall.js";
+import NavbarAlternative from "../components/Navbars/AuthNavbarAlternative";
 
 export default function Auth({ children }) {
   return (
     <>
-      <Navbar transparent />
+      <NavbarAlternative transparent />
       <main>
         <section className="relative w-full h-full py-40 min-h-screen">
           <div
             className="absolute top-0 w-full h-full bg-gray-900 bg-no-repeat bg-full"
             style={{
               backgroundImage:
-                "url(" + require("assets/img/register_bg_2.png") + ")",
+                "url(" + require("assets/img/health_3_background_1920_1200.jpg") + ")",
             }}
           ></div>
           {children}

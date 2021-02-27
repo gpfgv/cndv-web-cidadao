@@ -15,46 +15,21 @@ export default function Login() {
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
                   <h6 className="text-gray-600 text-sm font-bold">
-                    Sign in with
+
                   </h6>
                 </div>
                 <div className="btn-wrapper text-center">
-                  <button
-                    className="bg-white active:bg-gray-100 text-gray-800 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src={require("assets/img/github.svg")}
-                    />
-                    Github
-                  </button>
-                  <button
-                    className="bg-white active:bg-gray-100 text-gray-800 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src={require("assets/img/google.svg")}
-                    />
-                    Google
-                  </button>
                 </div>
                 <hr className="mt-6 border-b-1 border-gray-400" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <div className="text-gray-500 text-center mb-3 font-bold">
-                  <small>Or sign in with credentials</small>
-                </div>
                 <form>
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Email
+                      CPF
                     </label>
                     <input
                       type="email"
@@ -68,7 +43,7 @@ export default function Login() {
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Password
+                      Senha
                     </label>
                     <input
                       type="password"
@@ -84,7 +59,7 @@ export default function Login() {
                         className="form-checkbox text-gray-800 ml-1 w-5 h-5 ease-linear transition-all duration-150"
                       />
                       <span className="ml-2 text-sm font-semibold text-gray-700">
-                        Remember me
+                        Guardar sessão
                       </span>
                     </label>
                   </div>
@@ -94,7 +69,7 @@ export default function Login() {
                       className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
                     >
-                      Sign In
+                      Entrar
                     </button>
                   </div>
                 </form>
@@ -105,15 +80,15 @@ export default function Login() {
                 <a
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
-                  className="text-gray-300"
+                  className="text-gray-800"
                 >
-                  <small>Forgot password?</small>
+                  <small>Esquece sua senha</small>
                 </a>
               </div>
               <div className="w-1/2 text-right">
                 <Link href="/auth/register">
-                  <a href="#pablo" className="text-gray-300">
-                    <small>Create new account</small>
+                  <a href="#pablo" className="text-gray-800">
+                    <small>Criar uma conta no CNDV</small>
                   </a>
                 </Link>
               </div>

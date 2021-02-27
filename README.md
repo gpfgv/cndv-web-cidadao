@@ -29,7 +29,7 @@ O cidadão poderá na web fazer tudo o que ele pode fazer pela à APP: autentica
 - Login
 - Register
 - Presentation Samples
-- Landing
+- Index
 - Profile
 
 ### 18 componentes dinamicos
@@ -110,8 +110,8 @@ CNDV
 │   ├── auth
 │   │   ├── login.js
 │   │   └── register.js
+│   ├── index-old.js
 │   ├── index.js
-│   ├── landing.js
 │   └── profile.js
 └── tailwind.config.js
 ```

@@ -14,7 +14,7 @@ export default function FooterAdmin() {
                   href="#"
                   className="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
                 >
-                  Creative Tim
+                  Carteira Nacional Digital de Vacinação
                 </a>
               </div>
             </div>

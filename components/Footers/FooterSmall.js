@@ -20,7 +20,7 @@ export default function FooterSmall(props) {
                   href="#"
                   className="text-white hover:text-gray-400 text-sm font-semibold py-1"
                 >
-                  Creative Tim
+                  Carteira Nacional Digital de Vacinação
                 </a>
               </div>
             </div>
@@ -31,7 +31,7 @@ export default function FooterSmall(props) {
                     href="#"
                     className="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
                   >
-                    Creative Tim
+                    Campanhas
                   </a>
                 </li>
                 <li>
@@ -39,23 +39,7 @@ export default function FooterSmall(props) {
                     href="#"
                     className="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
                   >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                  >
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-white hover:text-gray-400 text-sm font-semibold block py-1 px-3"
-                  >
-                    MIT License
+                    Saiba mais
                   </a>
                 </li>
               </ul>

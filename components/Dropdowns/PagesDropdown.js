@@ -27,7 +27,7 @@ const PagesDropdown = () => {
           dropdownPopoverShow ? closeDropdownPopover() : openDropdownPopover();
         }}
       >
-        Demo Pages
+        <i className="fas fa-arrow-alt-circle-down px-2"> </i>  Mais informação
       </a>
       <div
         ref={popoverDropdownRef}

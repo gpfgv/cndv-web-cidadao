@@ -34,7 +34,8 @@ export default function Footer() {
                 >
                   Carteira Nacional Digital de Vacinação
                 </a>
-                .
+                <br />
+                v0.1.0-beta
               </div>
             </div>
           </div>

@@ -41,46 +41,46 @@ const PagesDropdown = () => {
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-no-wrap bg-transparent text-gray-500"
           }
         >
-          Admin Layout
+          Público
         </span>
-        <Link href="/admin/dashboard">
+        <Link href="#">
           <a
             href="#pablo"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-            Dashboard
+            Estatísticas de vacinação
           </a>
         </Link>
-        <Link href="/admin/settings">
+        <Link href="#">
           <a
             href="#pablo"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-            Settings
+            Campanhas
           </a>
         </Link>
-        <Link href="/admin/tables">
+        <Link href="#">
           <a
             href="#pablo"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-            Tables
+            Postos de Atendimento
           </a>
         </Link>
-        <Link href="/admin/maps">
+        <Link href="#">
           <a
             href="#pablo"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-            Maps
+           Iniciativas
           </a>
         </Link>
         <div className="h-0 mx-4 my-2 border border-solid border-gray-200" />
@@ -89,54 +89,26 @@ const PagesDropdown = () => {
             "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-no-wrap bg-transparent text-gray-500"
           }
         >
-          Auth Layout
+          Sua CNDV
         </span>
-        <Link href="/auth/login">
+        <Link href="#">
           <a
-            href="#pablo"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
-            }
+              href="#pablo"
+              className={
+                "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
+              }
           >
-            Login
+            Cadastrar-se
           </a>
         </Link>
-        <Link href="/auth/register">
+        <Link href="#">
           <a
             href="#pablo"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-            Register
-          </a>
-        </Link>
-        <div className="h-0 mx-4 my-2 border border-solid border-gray-200" />
-        <span
-          className={
-            "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-no-wrap bg-transparent text-gray-500"
-          }
-        >
-          No Layout
-        </span>
-        <Link href="/landing">
-          <a
-            href="#pablo"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
-            }
-          >
-            Lading
-          </a>
-        </Link>
-        <Link href="/profile">
-          <a
-            href="#pablo"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
-            }
-          >
-            Profile
+            Perguntas Frequentes
           </a>
         </Link>
       </div>

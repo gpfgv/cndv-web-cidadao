@@ -84,7 +84,7 @@ export default function Index() {
                     </div>
                     <h6 className="text-xl font-semibold"> Receba notificações</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Sempre que novas campanhas que você e sua família podem participar
+                      Sempre que novas campanhas forem realizadas, você e sua família serão notificados.
                     </p>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ export default function Index() {
                     </div>
                     <h6 className="text-xl font-semibold">Uma carteira única</h6>
                     <p className="mt-2 mb-4 text-gray-600">
-                      Sua carteira de vacinação é privada e somente você tem acesso a ela. As instituições públicas o privadas podem realizar alterações no seu histórico médico de vacinas somente se você permitir.
+                      Sua carteira de vacinação é privada e somente você tem acesso a ela. As instituições públicas o privadas podem realizar alterações no seu histórico de vacinas somente se você permitir.
                     </p>
                   </div>
                 </div>
@@ -115,7 +115,6 @@ export default function Index() {
                 </h3>
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                   É possivel buscar campanhas públicas de vacinação e filtar por idade, lugar e muito mais.
-                  Sua carteira de vacinação é privada e somente você tem acesso a ela. As instituições públicas o privadas podem realizar alterações no seu histórico médico de vacinas somente se você permitir.
                 </p>
                 <Link href="/auth/register">
                   <a
@@ -194,7 +193,7 @@ export default function Index() {
                   Receba notificações
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
-                  Sempre que novas campanhas que você e sua família podem participar
+                  Sempre que novas campanhas forem realizadas, você e sua família serão notificados.
                 </p>
               </div>
             </div>
@@ -207,7 +206,7 @@ export default function Index() {
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
                   <div className="flex-auto p-5 lg:p-10">
                     <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                      Todos os dados são mantidos em total sigilo e segurança
+                      Todos os dados são mantidos em total sigilo e segurança.
                     </p>
 
                     <div className="relative w-full mb-3">

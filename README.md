@@ -143,7 +143,6 @@ Page                                 Size     First Load JS
   ├ chunks/webpack.d7b2fb.js         751 B
   ├ css/353c0a03.0f742b7d.chunk.css  1.18 MB
   └ css/styles.eef505b9.chunk.css    10.3 kB
-
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 ○  (Static)  automatically rendered as static HTML (uses no initial props)
 ●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)

@@ -91,7 +91,7 @@ const PagesDropdown = () => {
         >
           Sua CNDV
         </span>
-        <Link href="#">
+        <Link href="auth/cadastro">
           <a
               href="#cndv"
               className={

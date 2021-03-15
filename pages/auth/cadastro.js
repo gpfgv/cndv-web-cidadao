@@ -1,66 +1,74 @@
 import React, { useState } from "react";
-import { useRouter } from 'next/router'
-import Link from "next/link";
-// layout for page
-import Auth from "layouts/Auth.js";
+import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { gql, useMutation } from '@apollo/client';
+import { useMutation, gql } from '@apollo/client';
+// layout for page
 
-const AUTENTICAR_USUARIO = gql`
-    mutation autenticarUsuario($input: AutenticarInput){
-      autenticarUsuario(input: $input) {
-        token
-      }
-    }
+import Auth from "layouts/Auth.js";
+
+const NOVO_USUARIO_ACESSO = gql`
+     mutation novoUsuarioAcesso($input: UsuarioInput) {
+            novoUsuarioAcesso(input: $input) {
+                cpf
+                nome
+                email
+            }
+        }
 `;
 
-export default function Login() {
+export default function Cadastro() {
 
-  //State for message
-  const [ message, saveMessage] = useState(null);
+  // State for message
+  const [message, saveMessage] = useState(null);
 
   // Apollo handles state by itself, not necessary to handle ourselves
-  const [ autenticatUsuario ] = useMutation(AUTENTICAR_USUARIO);
+  const [ novoUsuarioAcesso ] = useMutation(NOVO_USUARIO_ACESSO);
 
   const router = useRouter();
 
   const formik = useFormik({
     initialValues: {
+      nome: '',
+      email: '',
       cpf: '',
       senha: ''
     },
     validationSchema: Yup.object({
+      nome: Yup.string()
+          .required('O nome é obrigatório'),
+      email: Yup.string()
+          .email('Email não é válido')
+          .required('O email é obrigatório'),
       cpf: Yup.string()
           .required('O cpf é obrigatório')
           .min(14, 'O cpf tem que respeitar o seguinte formato: 333.333.333-33')
           .max(14, 'O cpf tem que respeitar o seguinte formato: 333.333.333-33'),
       senha: Yup.string()
           .required('A senha não pode estar em branco')
+          .min(6, 'A senha precisa ter miníno 6 caracteres')
     }),
     onSubmit: async inputData => {
 
-      const { cpf, senha } = inputData;
+      const { nome, email, cpf, senha } = inputData
 
       try {
-        const { data } = await autenticatUsuario({
+        const { data } = await novoUsuarioAcesso({
           variables: {
-            input: {
+            "input":{
+              nome,
+              email,
               cpf,
               senha
             }
           }
         });
-
-        saveMessage('Autenticando...');
-        const { token } = data.autenticarUsuario;
-        localStorage.setItem('token', token);
+        saveMessage(`Usuário cadastrado com sucesso`);
 
         setTimeout(() => {
           saveMessage(null);
-          router.push('/profile');
+          router.push('/auth/login');
         }, 2000);
-
       } catch (error) {
         saveMessage(error.message.replace('GraphQL error: ', ''));
 
@@ -73,7 +81,7 @@ export default function Login() {
 
   const showMessage = () => {
     return(
-        <div className="bg-red py-2 px-3 w-full my-3 max-w-sm text-center mx-auto">
+        <div className="bg-white py-2 px-3 w-full my-3 max-w-sm text-center mx-auto">
           <p>{message}</p>
         </div>
     )
@@ -83,7 +91,7 @@ export default function Login() {
     <>
       <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
-          <div className="w-full lg:w-4/12 px-4">
+          <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
@@ -92,6 +100,7 @@ export default function Login() {
                   </h6>
                 </div>
                 <div className="btn-wrapper text-center">
+
                 </div>
                 <hr className="mt-6 border-b-1 border-gray-400" />
               </div>
@@ -100,17 +109,65 @@ export default function Login() {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      htmlFor="nome"
+                    >
+                      Nome
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           id="nome"
+                           type="text"
+                           placeholder="Nome"
+                           value={formik.values.nome}
+                           onChange={formik.handleChange}
+                           onBlur={formik.handleBlur}
+                    />
+                  </div>
+
+                  { formik.touched.nome && formik.errors.nome ? (
+                      <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                        <p className="font-bold">Error</p>
+                        <p>{formik.errors.nome}</p>
+                      </div>
+                  ) : null }
+
+                  <div className="relative w-full mb-3">
+                    <label
+                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        htmlFor="email"
+                    >
+                     Email
+                    </label>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           id="email"
+                           type="text"
+                           placeholder="Email"
+                           value={formik.values.email}
+                           onChange={formik.handleChange}
+                           onBlur={formik.handleBlur}
+                    />
+                  </div>
+
+                  { formik.touched.email && formik.errors.email ? (
+                      <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                        <p className="font-bold">Error</p>
+                        <p>{formik.errors.email}</p>
+                      </div>
+                  ) : null }
+
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
                       htmlFor="cpf"
                     >
                       CPF
                     </label>
-                    <input className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                            id="cpf"
                            type="text"
                            placeholder="CPF"
+                           value={formik.values.cpf}
                            onChange={formik.handleChange}
                            onBlur={formik.handleBlur}
-                           value={formik.values.cpf}
                     />
                   </div>
 
@@ -123,18 +180,18 @@ export default function Login() {
 
                   <div className="relative w-full mb-3">
                     <label
-                      className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="senha"
+                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                        htmlFor="senha"
                     >
                       Senha
                     </label>
-                    <input className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                            id="senha"
                            type="password"
                            placeholder="Senha"
+                           value={formik.values.senha}
                            onChange={formik.handleChange}
                            onBlur={formik.handleBlur}
-                           value={formik.values.senha}
                     />
                   </div>
 
@@ -153,7 +210,14 @@ export default function Login() {
                         className="form-checkbox text-gray-800 ml-1 w-5 h-5 ease-linear transition-all duration-150"
                       />
                       <span className="ml-2 text-sm font-semibold text-gray-700">
-                        Guardar sessão
+                        Estou de acordo com o{" "}
+                        <a
+                          href="#cndv"
+                          className="text-blue-500"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Termo de Uso e Privacidade
+                        </a>
                       </span>
                     </label>
                   </div>
@@ -162,28 +226,10 @@ export default function Login() {
                     <input
                         type="submit"
                         className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                        value="Entrar"
+                        value="Cadastrar-se"
                     />
                   </div>
                 </form>
-              </div>
-            </div>
-            <div className="flex flex-wrap mt-6 relative">
-              <div className="w-1/2">
-                <a
-                  href="#cndv"
-                  onClick={(e) => e.preventDefault()}
-                  className="text-gray-800"
-                >
-                  <small>Esquece sua senha</small>
-                </a>
-              </div>
-              <div className="w-1/2 text-right">
-                <Link href="/auth/cadastro">
-                  <a href="#" className="text-gray-800">
-                    <small>Criar uma conta no CNDV</small>
-                  </a>
-                </Link>
               </div>
             </div>
           </div>
@@ -193,4 +239,4 @@ export default function Login() {
   );
 }
 
-Login.layout = Auth;
+Cadastro.layout = Auth;

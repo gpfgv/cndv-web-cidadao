@@ -208,7 +208,7 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/auth/register">
+                <Link href="/auth/cadastro">
                   <a
                     href="#cndv"
                     className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"

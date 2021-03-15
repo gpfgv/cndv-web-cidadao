@@ -101,7 +101,7 @@ const IndexDropdown = () => {
             Login
           </a>
         </Link>
-        <Link href="/auth/register">
+        <Link href="/auth/cadastro">
           <a
             href="#cndv"
             className={

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import Cadastro from "./auth/cadastro";
 
 export default function Index() {
   return (
@@ -116,7 +117,7 @@ export default function Index() {
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                   É possivel buscar campanhas públicas de vacinação e filtar por idade, lugar e muito mais.
                 </p>
-                <Link href="/auth/register">
+                <Link href="/auth/cadastro">
                   <a
                       href="#"
                       className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
@@ -130,7 +131,7 @@ export default function Index() {
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-gray-800">
                   <img
-                      src={require("assets/img/cndv_app_login.jpg")}
+                      src={require("assets/img/cndv_app_push.jpeg")}
                       className="w-full align-middle rounded-t-lg"
                       alt="..."
                   ></img>{" "}
@@ -202,65 +203,8 @@ export default function Index() {
         <section className="relative block py-24 lg:pt-0 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                      Todos os dados são mantidos em total sigilo e segurança.
-                    </p>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                          className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="nome"
-                      >
-                        Nome
-                      </label>
-                      <input
-                          type="email"
-                          className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                          placeholder="Nome"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                          className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="cpf"
-                      >
-                        CPF
-                      </label>
-                      <input
-                          type="text"
-                          className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                          placeholder="CPF"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                          className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                          type="email"
-                          className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                          placeholder="Email"
-                      />
-                    </div>
-
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Cadastrar
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full px-4">
+                  <Cadastro />
               </div>
             </div>
           </div>

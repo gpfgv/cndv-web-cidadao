@@ -27,7 +27,7 @@ O cidadão poderá na web fazer tudo o que ele pode fazer pela à APP: autentica
 - Maps
 - Authentication Samples
 - Login
-- Register
+- Cadastro
 - Presentation Samples
 - Index
 - Profile
@@ -109,7 +109,7 @@ CNDV
 │   │   └── tables.js
 │   ├── auth
 │   │   ├── login.js
-│   │   └── register.js
+│   │   └── cadastro.js
 │   ├── index-old.js
 │   ├── index.js
 │   └── profile.js
@@ -130,7 +130,7 @@ Page                                 Size     First Load JS
 ├ λ /admin/settings                  1.86 kB          76 kB
 ├ λ /admin/tables                    2.01 kB        76.2 kB
 ├ λ /auth/login                      5.94 kB        76.9 kB
-├ λ /auth/register                   5.91 kB        76.8 kB
+├ λ /auth/cadastro                   5.91 kB        76.8 kB
 ├ λ /landing                         5.58 kB        76.5 kB
 └ λ /profile                         3.66 kB        74.6 kB
 + First Load JS shared by all        63.1 kB

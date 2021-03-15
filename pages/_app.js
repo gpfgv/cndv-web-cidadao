@@ -8,6 +8,8 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
+import {ApolloProvider} from "@apollo/client";
+import apolloClient from "../config/apollo";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Carregando: ${url}`);
@@ -42,18 +44,20 @@ export default class MyApp extends App {
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
-      <React.Fragment>
-        <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-          <title>CNDV | Carteira Nacional Digital de Vacinação</title>
-        </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </React.Fragment>
+      <ApolloProvider client={apolloClient}>
+        <React.Fragment>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            />
+            <title>CNDV | Carteira Nacional Digital de Vacinação</title>
+          </Head>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </React.Fragment>
+      </ApolloProvider>
     );
   }
 }

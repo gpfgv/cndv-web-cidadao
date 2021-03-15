@@ -1,11 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from 'next/router'
 import Link from "next/link";
-
 // layout for page
-
 import Auth from "layouts/Auth.js";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { gql, useMutation } from '@apollo/client';
+
+const AUTENTICAR_USUARIO = gql`
+    mutation autenticarUsuario($input: AutenticarInput){
+      autenticarUsuario(input: $input) {
+        token
+      }
+    }
+`;
 
 export default function Login() {
+
+  //State for message
+  const [ message, saveMessage] = useState(null);
+
+  // Apollo handles state by itself, not necessary to handle ourselves
+  const [ autenticatUsuario ] = useMutation(AUTENTICAR_USUARIO);
+
+  const router = useRouter();
+
+  const formik = useFormik({
+    initialValues: {
+      cpf: '',
+      senha: ''
+    },
+    validationSchema: Yup.object({
+      cpf: Yup.string()
+          .required('O cpf é obrigatório')
+          .min(14, 'O cpf tem que respeitar o seguinte formato: 333.333.333-33')
+          .max(14, 'O cpf tem que respeitar o seguinte formato: 333.333.333-33'),
+      senha: Yup.string()
+          .required('A senha não pode estar em branco')
+    }),
+    onSubmit: async inputData => {
+
+      const { cpf, senha } = inputData;
+
+      try {
+        const { data } = await autenticatUsuario({
+          variables: {
+            input: {
+              cpf,
+              senha
+            }
+          }
+        });
+
+        saveMessage('Autenticando...');
+        const { token } = data.autenticarUsuario;
+        localStorage.setItem('token', token);
+
+        setTimeout(() => {
+          saveMessage(null);
+          router.push('/profile');
+        }, 2000);
+
+      } catch (error) {
+        saveMessage(error.message.replace('GraphQL error: ', ''));
+
+        setTimeout(() => {
+          saveMessage(null);
+        }, 3000);
+      }
+    }
+  });
+
+  const showMessage = () => {
+    return(
+        <div className="bg-red py-2 px-3 w-full my-3 max-w-sm text-center mx-auto">
+          <p>{message}</p>
+        </div>
+    )
+  }
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -15,7 +88,7 @@ export default function Login() {
               <div className="rounded-t mb-0 px-6 py-6">
                 <div className="text-center mb-3">
                   <h6 className="text-gray-600 text-sm font-bold">
-
+                    { message && showMessage() }
                   </h6>
                 </div>
                 <div className="btn-wrapper text-center">
@@ -23,34 +96,55 @@ export default function Login() {
                 <hr className="mt-6 border-b-1 border-gray-400" />
               </div>
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <form>
+                <form onSubmit={formik.handleSubmit}>
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
+                      htmlFor="cpf"
                     >
                       CPF
                     </label>
-                    <input
-                      type="email"
-                      className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                      placeholder="Email"
+                    <input className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                           id="cpf"
+                           type="text"
+                           placeholder="CPF"
+                           onChange={formik.handleChange}
+                           onBlur={formik.handleBlur}
+                           value={formik.values.cpf}
                     />
                   </div>
+
+                  { formik.touched.cpf && formik.errors.cpf ? (
+                      <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                        <p className="font-bold">Error</p>
+                        <p>{formik.errors.cpf}</p>
+                      </div>
+                  ) : null }
 
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
+                      htmlFor="senha"
                     >
                       Senha
                     </label>
-                    <input
-                      type="password"
-                      className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
-                      placeholder="Password"
+                    <input className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full ease-linear transition-all duration-150"
+                           id="senha"
+                           type="password"
+                           placeholder="Senha"
+                           onChange={formik.handleChange}
+                           onBlur={formik.handleBlur}
+                           value={formik.values.senha}
                     />
                   </div>
+
+                  { formik.touched.senha && formik.errors.senha ? (
+                      <div className="my-2 bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                        <p className="font-bold">Error</p>
+                        <p>{formik.errors.senha}</p>
+                      </div>
+                  ) : null }
+
                   <div>
                     <label className="inline-flex items-center cursor-pointer">
                       <input
@@ -65,12 +159,11 @@ export default function Login() {
                   </div>
 
                   <div className="text-center mt-6">
-                    <button
-                      className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-                      type="button"
-                    >
-                      Entrar
-                    </button>
+                    <input
+                        type="submit"
+                        className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                        value="Entrar"
+                    />
                   </div>
                 </form>
               </div>
@@ -78,7 +171,7 @@ export default function Login() {
             <div className="flex flex-wrap mt-6 relative">
               <div className="w-1/2">
                 <a
-                  href="#pablo"
+                  href="#cndv"
                   onClick={(e) => e.preventDefault()}
                   className="text-gray-800"
                 >
@@ -87,7 +180,7 @@ export default function Login() {
               </div>
               <div className="w-1/2 text-right">
                 <Link href="/auth/register">
-                  <a href="#pablo" className="text-gray-800">
+                  <a href="#" className="text-gray-800">
                     <small>Criar uma conta no CNDV</small>
                   </a>
                 </Link>

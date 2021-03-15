@@ -3,7 +3,7 @@ Web desenvolvida usando React.js/Next.js e TailwindCSS.
 
 O cidadão poderá na web fazer tudo o que ele pode fazer pela à APP: autenticar-se e cadastrar-se, consultar campanhas.
 
-### Configurar
+### Configurar  
 
 - Instalar NodeJS **LTS** <a href="https://nodejs.org/en">Página oficial do NodeJs</a>
 - Unzip os arquivos na máquina do servidor

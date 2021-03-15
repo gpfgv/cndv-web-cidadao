@@ -19,7 +19,7 @@ const NotificationDropdown = () => {
     <>
       <a
         className="text-gray-600 py-1 px-3"
-        href="#pablo"
+        href="#cndv"
         ref={btnDropdownRef}
         onClick={(e) => {
           e.preventDefault();
@@ -36,31 +36,22 @@ const NotificationDropdown = () => {
         }
       >
         <a
-          href="#pablo"
+          href="#cndv"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
           }
           onClick={(e) => e.preventDefault()}
         >
-          Action
+          Permitir acesso
         </a>
         <a
-          href="#pablo"
+          href="#cndv"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
           }
           onClick={(e) => e.preventDefault()}
         >
-          Another action
-        </a>
-        <a
-          href="#pablo"
-          className={
-            "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
-          }
-          onClick={(e) => e.preventDefault()}
-        >
-          Something else here
+         Ver Detalhes
         </a>
       </div>
     </>

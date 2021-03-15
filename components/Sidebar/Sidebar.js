@@ -23,7 +23,7 @@ export default function Sidebar() {
           {/* Brand */}
           <Link href="/">
             <a
-              href="#pablo"
+              href="#cndv"
               className="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
             >
               Notus NextJS
@@ -51,7 +51,7 @@ export default function Sidebar() {
                 <div className="w-6/12">
                   <Link href="/">
                     <a
-                      href="#pablo"
+                      href="#cndv"
                       className="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
                     >
                       Notus NextJS
@@ -92,7 +92,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/admin/dashboard">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
                       (router.pathname.indexOf("/admin/dashboard") !== -1
@@ -116,7 +116,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/admin/settings">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
                       (router.pathname.indexOf("/admin/settings") !== -1
@@ -140,7 +140,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/admin/tables">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
                       (router.pathname.indexOf("/admin/tables") !== -1
@@ -164,7 +164,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/admin/maps">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className={
                       "text-xs uppercase py-3 font-bold block " +
                       (router.pathname.indexOf("/admin/maps") !== -1
@@ -198,7 +198,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/auth/login">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i>{" "}
@@ -210,7 +210,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/auth/register">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-clipboard-list text-gray-400 mr-2 text-sm"></i>{" "}
@@ -232,7 +232,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/landing">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-newspaper text-gray-500 mr-2 text-sm"></i>{" "}
@@ -244,7 +244,7 @@ export default function Sidebar() {
               <li className="items-center">
                 <Link href="/profile">
                   <a
-                    href="#pablo"
+                    href="#cndv"
                     className="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                   >
                     <i className="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>{" "}

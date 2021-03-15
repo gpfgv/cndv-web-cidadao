@@ -20,7 +20,7 @@ const PagesDropdown = () => {
     <>
       <a
         className="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-        href="#pablo"
+        href="#cndv"
         ref={btnDropdownRef}
         onClick={(e) => {
           e.preventDefault();
@@ -45,7 +45,7 @@ const PagesDropdown = () => {
         </span>
         <Link href="#">
           <a
-            href="#pablo"
+            href="#cndv"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
@@ -55,7 +55,7 @@ const PagesDropdown = () => {
         </Link>
         <Link href="#">
           <a
-            href="#pablo"
+            href="#cndv"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
@@ -65,7 +65,7 @@ const PagesDropdown = () => {
         </Link>
         <Link href="#">
           <a
-            href="#pablo"
+            href="#cndv"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
@@ -75,12 +75,12 @@ const PagesDropdown = () => {
         </Link>
         <Link href="#">
           <a
-            href="#pablo"
+            href="#cndv"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }
           >
-           Iniciativas
+           Baixar APP
           </a>
         </Link>
         <div className="h-0 mx-4 my-2 border border-solid border-gray-200" />
@@ -93,7 +93,7 @@ const PagesDropdown = () => {
         </span>
         <Link href="#">
           <a
-              href="#pablo"
+              href="#cndv"
               className={
                 "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
               }
@@ -103,7 +103,7 @@ const PagesDropdown = () => {
         </Link>
         <Link href="#">
           <a
-            href="#pablo"
+            href="#cndv"
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-no-wrap bg-transparent text-gray-800"
             }

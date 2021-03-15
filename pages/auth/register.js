@@ -90,7 +90,7 @@ export default function Register() {
                       <span className="ml-2 text-sm font-semibold text-gray-700">
                         Estou de acordo com o{" "}
                         <a
-                          href="#pablo"
+                          href="#cndv"
                           className="text-blue-500"
                           onClick={(e) => e.preventDefault()}
                         >

@@ -68,7 +68,7 @@ export default function CardProfile() {
                   range.
                 </p>
                 <a
-                  href="#pablo"
+                  href="#cndv"
                   className="font-normal text-blue-500"
                   onClick={(e) => e.preventDefault()}
                 >

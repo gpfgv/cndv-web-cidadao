@@ -19,7 +19,6 @@ const OBTENER_USUARIO = gql`
 export default function Navbar(props) {
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-
   const router = useRouter();
 
   const { data, loading, error } = useQuery(OBTENER_USUARIO);

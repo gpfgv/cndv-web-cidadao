@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import { setContext } from 'apollo-link-context';
 
 const httpLink = createHttpLink({
-    uri: 'https://cndv-web-cidadao-ip43dic0z-gpfgv.vercel.app',
+    uri: 'https://blooming-wildwood-50755.herokuapp.com',
     fetch
 });
 

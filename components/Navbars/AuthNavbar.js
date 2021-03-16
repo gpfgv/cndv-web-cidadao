@@ -26,7 +26,7 @@ export default function Navbar(props) {
   if (loading) return 'Carregando...';
 
   if(!data) {
-    return router.push('/login');
+    return router.push('/auth/login');
   }
 
   if(data.obtenerUsuario){
@@ -35,7 +35,7 @@ export default function Navbar(props) {
 
   const closeSession = () => {
     localStorage.removeItem('token');
-    router.push('/login');
+    router.push('/auth/login');
   }
   return (
     <>

@@ -1001,7 +1001,7 @@ function Navbar(props) {
   if (loading) return 'Carregando...';
 
   if (!data) {
-    return router.push('/login');
+    return router.push('/auth/login');
   }
 
   if (data.obtenerUsuario) {
@@ -1014,7 +1014,7 @@ function Navbar(props) {
 
   const closeSession = () => {
     localStorage.removeItem('token');
-    router.push('/login');
+    router.push('/auth/login');
   };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("nav", {

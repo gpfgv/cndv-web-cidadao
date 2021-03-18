@@ -20,7 +20,7 @@ export default function FooterSmall(props) {
                   href="#"
                   className="text-white hover:text-gray-400 text-sm font-semibold py-1"
                 >
-                  Carteira Nacional Digital de Vacinação v0.1.0-beta
+                  Carteira Nacional Digital de Vacina v0.1.0-beta
                 </a>
               </div>
             </div>

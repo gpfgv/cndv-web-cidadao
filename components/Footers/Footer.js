@@ -32,7 +32,7 @@ export default function Footer() {
                   href="#"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Carteira Nacional Digital de Vacinação
+                  Carteira Nacional Digital de Vacina
                 </a>
                 <br />
                 v0.1.0-beta

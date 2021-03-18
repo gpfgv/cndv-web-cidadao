@@ -1,6 +1,5 @@
 import React from "react";
 import { gql, useMutation } from '@apollo/client';
-import Router from 'next/router';
 import TabsRender from "../components/Tabs/CidadaoCarteiraTabs";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
@@ -90,7 +89,6 @@ export default function Profile() {
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}
                     Barueri, SP
                   </div>
-
 
                 </div>
                 <div className="mt-10 py-10 border-t border-gray-300 text-center">

@@ -14,7 +14,7 @@ export default function FooterAdmin() {
                   href="#"
                   className="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1"
                 >
-                  Carteira Nacional Digital de Vacinação
+                  Carteira Nacional Digital de Vacina
                 </a>
               </div>
             </div>

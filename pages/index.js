@@ -117,13 +117,13 @@ export default function Index() {
                 <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
                   É possivel buscar campanhas públicas de vacinação e filtar por idade, lugar e muito mais.
                 </p>
-                <Link href="/auth/cadastro">
+                <Link href="https://play.google.com/apps/internaltest/4699445271726655291">
                   <a
-                      href="#"
+                      href="https://play.google.com/apps/internaltest/4699445271726655291"
                       className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg"
                       target="_blank"
                   >
-                    Baixar App (Em progresso)
+                    Baixar Android App
                   </a>
                 </Link>
               </div>

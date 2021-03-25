@@ -4,6 +4,7 @@ import TabsRender from "../components/Tabs/CidadaoCarteiraTabs";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import {getSession} from "next-auth/client";
 
 // Query used on update cache on new data added
 const OBTENER_CAMPANHAS = gql`
@@ -83,7 +84,7 @@ export default function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-2xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
-                    Jhony Vidal
+                    UsuarioQA
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
                     <i className="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i>{" "}

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from 'next-auth/client';
 import App from "next/app";
 import Head from "next/head";
 import Router from "next/router";
@@ -44,20 +45,22 @@ export default class MyApp extends App {
     const Layout = Component.layout || (({ children }) => <>{children}</>);
 
     return (
-      <ApolloProvider client={apolloClient}>
-        <React.Fragment>
-          <Head>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1, shrink-to-fit=no"
-            />
-            <title>CNDV | Carteira Nacional Digital de Vacina</title>
-          </Head>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </React.Fragment>
-      </ApolloProvider>
+        <Provider session={pageProps.session}>
+          <ApolloProvider client={apolloClient}>
+            <React.Fragment>
+              <Head>
+                <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                />
+                <title>CNDV | Carteira Nacional Digital de Vacina</title>
+              </Head>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </React.Fragment>
+          </ApolloProvider>
+        </Provider>
     );
   }
 }

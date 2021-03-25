@@ -1,41 +1,21 @@
 import React from "react";
-import { useQuery, gql} from '@apollo/client';
 import { useRouter } from 'next/router';
 import Link from "next/link";
-// components
+import {signOut, useSession, getSession } from "next-auth/client";
 import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
-
-// GraphQL Query
-const OBTENER_USUARIO = gql`
-        query obtenerUsuario{
-            obtenerUsuario{
-                cpf
-                nome
-                email
-            }
-        }
-    `;
 
 export default function Navbar(props) {
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [ session, loading ] = useSession()
   const router = useRouter();
 
-  const { data, loading, error } = useQuery(OBTENER_USUARIO);
   if (loading) return 'Carregando...';
 
-  if(!data) {
-    return router.push('/auth/login');
-  }
-
-  if(data.obtenerUsuario){
-    const { cpf, nome, email } = data.obtenerUsuario;
-  }
-
   const closeSession = () => {
-    localStorage.removeItem('token');
-    router.push('/auth/login');
+    signOut();
   }
+
   return (
     <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
@@ -92,8 +72,7 @@ export default function Navbar(props) {
 
               <li className="flex items-center">
 
-
-                    { (data.obtenerUsuario) ?
+                    { (session) ?
                         <>
                         <Link href="/profile">
                           <a
@@ -144,3 +123,21 @@ export default function Navbar(props) {
     </>
   );
 }
+
+export async function getServerSideProps(context) {
+  const session = await getSession({ req: context.req });
+
+  if(!session) {
+    return {
+      redirect: {
+        destination: '/auth/login',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: { },
+  };
+}
+

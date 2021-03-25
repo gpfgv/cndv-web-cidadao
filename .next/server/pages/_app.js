@@ -119,6 +119,9 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_react_dom_ = __webpack_require__("faye");
 var external_react_dom_default = /*#__PURE__*/__webpack_require__.n(external_react_dom_);
 
+// EXTERNAL MODULE: external "next-auth/client"
+var client_ = __webpack_require__("FctI");
+
 // EXTERNAL MODULE: ./node_modules/next/app.js
 var app = __webpack_require__("8Bbg");
 var app_default = /*#__PURE__*/__webpack_require__.n(app);
@@ -162,47 +165,14 @@ var all_min = __webpack_require__("vs8Z");
 var tailwind = __webpack_require__("FN20");
 
 // EXTERNAL MODULE: external "@apollo/client"
-var client_ = __webpack_require__("z+8S");
+var external_apollo_client_ = __webpack_require__("z+8S");
 
-// EXTERNAL MODULE: external "node-fetch"
-var external_node_fetch_ = __webpack_require__("4vsW");
-var external_node_fetch_default = /*#__PURE__*/__webpack_require__.n(external_node_fetch_);
+// EXTERNAL MODULE: ./config/apollo.js
+var apollo = __webpack_require__("f2y5");
 
-// EXTERNAL MODULE: external "apollo-link-context"
-var external_apollo_link_context_ = __webpack_require__("LvlT");
-
-// CONCATENATED MODULE: ./config/apollo.js
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-const httpLink = Object(client_["createHttpLink"])({
-  uri: 'https://blooming-wildwood-50755.herokuapp.com',
-  fetch: external_node_fetch_default.a
-});
-const authLink = Object(external_apollo_link_context_["setContext"])((_, {
-  headers
-}) => {
-  const token = localStorage.getItem('token');
-  return {
-    headers: _objectSpread(_objectSpread({}, headers), {}, {
-      authorization: token ? `Bearer ${token}` : ''
-    })
-  };
-});
-const apolloClient = new client_["ApolloClient"]({
-  connectToDevTools: true,
-  cache: new client_["InMemoryCache"](),
-  link: authLink.concat(httpLink)
-});
-/* harmony default export */ var apollo = (apolloClient);
 // CONCATENATED MODULE: ./pages/_app.js
 var _app_jsx = external_react_default.a.createElement;
+
 
 
 
@@ -255,12 +225,14 @@ class _app_MyApp extends app_default.a {
       children
     }) => _app_jsx(external_react_default.a.Fragment, null, children));
 
-    return _app_jsx(client_["ApolloProvider"], {
-      client: apollo
+    return _app_jsx(client_["Provider"], {
+      session: pageProps.session
+    }, _app_jsx(external_apollo_client_["ApolloProvider"], {
+      client: apollo["a" /* default */]
     }, _app_jsx(external_react_default.a.Fragment, null, _app_jsx(head_default.a, null, _app_jsx("meta", {
       name: "viewport",
       content: "width=device-width, initial-scale=1, shrink-to-fit=no"
-    }), _app_jsx("title", null, "CNDV | Carteira Nacional Digital de Vacina")), _app_jsx(Layout, null, _app_jsx(Component, pageProps))));
+    }), _app_jsx("title", null, "CNDV | Carteira Nacional Digital de Vacina")), _app_jsx(Layout, null, _app_jsx(Component, pageProps)))));
   }
 
 }
@@ -434,6 +406,13 @@ function createUrl(router) {
 
 /***/ }),
 
+/***/ "FctI":
+/***/ (function(module, exports) {
+
+module.exports = require("next-auth/client");
+
+/***/ }),
+
 /***/ "LvlT":
 /***/ (function(module, exports) {
 
@@ -445,6 +424,48 @@ module.exports = require("apollo-link-context");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "f2y5":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("z+8S");
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("4vsW");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var apollo_link_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("LvlT");
+/* harmony import */ var apollo_link_context__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(apollo_link_context__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+const httpLink = Object(_apollo_client__WEBPACK_IMPORTED_MODULE_0__["createHttpLink"])({
+  uri: 'https://blooming-wildwood-50755.herokuapp.com',
+  fetch: (node_fetch__WEBPACK_IMPORTED_MODULE_1___default())
+});
+const authLink = Object(apollo_link_context__WEBPACK_IMPORTED_MODULE_2__["setContext"])((_, {
+  headers
+}) => {
+  const token = localStorage.getItem('token');
+  return {
+    headers: _objectSpread(_objectSpread({}, headers), {}, {
+      authorization: token ? `Bearer ${token}` : ''
+    })
+  };
+});
+const apolloClient = new _apollo_client__WEBPACK_IMPORTED_MODULE_0__["ApolloClient"]({
+  connectToDevTools: true,
+  cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__["InMemoryCache"](),
+  link: authLink.concat(httpLink)
+});
+/* harmony default export */ __webpack_exports__["a"] = (apolloClient);
 
 /***/ }),
 

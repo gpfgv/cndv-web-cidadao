@@ -3,6 +3,14 @@ import { useRouter } from 'next/router';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useMutation, gql } from '@apollo/client';
+import DateFnsUtils from "@date-io/date-fns";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+  DatePicker,
+  TimePicker,
+  DateTimePicker,
+} from "@material-ui/pickers";
 // layout for page
 
 import Auth from "layouts/Auth.js";
@@ -32,7 +40,8 @@ export default function Cadastro() {
       nome: '',
       email: '',
       cpf: '',
-      senha: ''
+      senha: '',
+      dt_nascimento: ''
     },
     validationSchema: Yup.object({
       nome: Yup.string()
@@ -46,11 +55,13 @@ export default function Cadastro() {
           .max(14, 'O cpf tem que respeitar o seguinte formato: 333.333.333-33'),
       senha: Yup.string()
           .required('A senha não pode estar em branco')
-          .min(6, 'A senha precisa ter miníno 6 caracteres')
+          .min(6, 'A senha precisa ter miníno 6 caracteres'),
+      dt_nascimento: Yup.date().nullable()
     }),
     onSubmit: async inputData => {
 
-      const { nome, email, cpf, senha } = inputData
+      console.log(inputData);
+      const { nome, email, cpf, senha, dt_nascimento } = inputData
 
       try {
         const { data } = await novoUsuarioAcesso({
@@ -59,7 +70,8 @@ export default function Cadastro() {
               nome,
               email,
               cpf,
-              senha
+              senha,
+              dt_nascimento
             }
           }
         });
@@ -129,6 +141,22 @@ export default function Cadastro() {
                         <p>{formik.errors.nome}</p>
                       </div>
                   ) : null }
+
+                  <div className="relative w-full mb-3">
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                      <KeyboardDatePicker
+                          id="date-picker-dialog"
+                          label="Data Nascimento"
+                          inputVariant="outlined"
+                          format="MM/dd/yyyy"
+                          value={formik.values.dt_nascimento}
+                          onChange={value => props.setFieldValue("dt_nascimento", value)}
+                          KeyboardButtonProps={{
+                            "aria-label": "Mudar data"
+                          }}
+                      />
+                    </MuiPickersUtilsProvider>
+                  </div>
 
                   <div className="relative w-full mb-3">
                     <label

@@ -7,6 +7,7 @@
   "/admin/maps": "pages/admin/maps.js",
   "/admin/settings": "pages/admin/settings.js",
   "/admin/tables": "pages/admin/tables.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/auth/cadastro": "pages/auth/cadastro.js",
   "/auth/login": "pages/auth/login.js",
   "/index-old": "pages/index-old.js",

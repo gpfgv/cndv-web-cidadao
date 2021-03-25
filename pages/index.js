@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import {getSession} from "next-auth/client";
 
 // components
-
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
 import Cadastro from "./auth/cadastro";

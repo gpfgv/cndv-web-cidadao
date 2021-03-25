@@ -1,27 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router'
 import Link from "next/link";
-// layout for page
 import Auth from "layouts/Auth.js";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { gql, useMutation } from '@apollo/client';
-
-const AUTENTICAR_USUARIO = gql`
-    mutation autenticarUsuario($input: AutenticarInput){
-      autenticarUsuario(input: $input) {
-        token
-      }
-    }
-`;
+import { getSession } from 'next-auth/client';
+import { signIn } from 'next-auth/client';
 
 export default function Login() {
 
   //State for message
   const [ message, saveMessage] = useState(null);
-
-  // Apollo handles state by itself, not necessary to handle ourselves
-  const [ autenticatUsuario ] = useMutation(AUTENTICAR_USUARIO);
+  const [ isLoading, setIsLoading ] = useState(true);
 
   const router = useRouter();
 
@@ -42,34 +32,41 @@ export default function Login() {
 
       const { cpf, senha } = inputData;
 
-      try {
-        const { data } = await autenticatUsuario({
-          variables: {
-            input: {
-              cpf,
-              senha
-            }
-          }
-        });
-
+      if(cpf && senha){
         saveMessage('Autenticando...');
-        const { token } = data.autenticarUsuario;
-        localStorage.setItem('token', token);
-
+        const result = await signIn('credentials',{
+          redirect: false,
+          cpf: cpf,
+          password: senha
+        });
+        console.log(result);
+        if (!result.error) {
+          setTimeout(() => {
+            saveMessage(null);
+            router.replace('/profile');
+          }, 2000);
+        }
+      }else{
         setTimeout(() => {
-          saveMessage(null);
-          router.push('/profile');
-        }, 2000);
-
-      } catch (error) {
-        saveMessage(error.message.replace('GraphQL error: ', ''));
-
-        setTimeout(() => {
-          saveMessage(null);
+          saveMessage("Por favor verifique os dados de acesso!");
         }, 3000);
       }
     }
   });
+
+  useEffect(() => {
+    getSession().then(session => {
+      if(session) {
+        router.replace('/');
+      } else {
+        setIsLoading(false);
+      };
+    });
+  }, [router]);
+
+  if(isLoading) {
+    return <p>Carregando...</p>;
+  }
 
   const showMessage = () => {
     return(
